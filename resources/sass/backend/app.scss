@@ -1,0 +1,41 @@
+@import "../global";
+
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+
+// Fix mobile footer
+.app-footer {
+    flex: 0 0;
+    padding-top: map-get($spacers, 3);
+    padding-bottom: map-get($spacers, 3);
+}
+
+// Fix dropdown in tables
+@media (max-width: 767px) {
+    .table-responsive .dropdown-menu {
+        position: static !important;
+    }
+}
+@media (min-width: 768px) {
+    .table-responsive {
+        overflow: visible;
+    }
+}
+
+//Blinking Fix
+[v-cloak] { display: none; }
+
+.invalid-feedback {
+    display: block;
+}
+
+.modal-body.no-padding{
+    padding: 0;
+}
+
+.no-padding .form-horizontal .card{
+    margin-bottom: 0;
+}
